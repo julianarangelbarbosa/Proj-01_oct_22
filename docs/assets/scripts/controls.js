@@ -7,23 +7,23 @@ class Controls {
       window.addEventListener('keydown', (e) => {
         switch (e.code) {
           case 'ArrowLeft':
-            if (this.operador1.px > 0) {
-              this.operador1.px -= 0.3;
+            if (this.operador1.x > 0) {
+              this.operador1.x -= 10;
             }
             break;
           case 'ArrowRight':
-            if (this.operador1.px <= 700) {
-              this.operador1.px += 0.3;
+            if (this.operador1.x <= 400) {
+              this.operador1.x += 10;
             }
             break;
           case "ArrowUp":
-            if (this.operador1.py > 100)
-            { this.operador1.py -=0.3}
+            if (this.operador1.y > 30)
+            { this.operador1.y -=10}
             break;
             
          case "ArrowDown":
-            if (this.operador1.py <= 400){
-                this.operador1.py +=0.3}
+            if (this.operador1.y <= 400){
+                this.operador1.y +=10}
             break;            
 
         }

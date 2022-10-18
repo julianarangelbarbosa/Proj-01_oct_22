@@ -1,10 +1,10 @@
 class Enemy {
     constructor(container) {
       this.container = container
-      this.x = Math.floor(Math.random() * 500);
-      this.y = Math.floor(Math.random() * 600);
-      this.w = 80; /* Math.floor(Math.random() * 400)+200; */
-      this.h = 80;
+      this.x = Math.floor(Math.random() * 350);
+      this.y = Math.floor(Math.random() * (canvas.height - 60)+60);
+      this.w = 48; /* Math.floor(Math.random() * 400)+200; */
+      this.h = 48;
       /* this.color = `rgb(${this.y % 255}, 0, 0)`; */
       this.img = new Image();
       this.img.src ="docs/assets/images/truck2.png";
