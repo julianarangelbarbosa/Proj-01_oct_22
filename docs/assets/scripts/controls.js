@@ -12,17 +12,17 @@ class Controls {
             }
             break;
           case 'ArrowRight':
-            if (this.operador1.x <= 400) {
+            if (this.operador1.x <= 390) {
               this.operador1.x += 10;
             }
             break;
           case "ArrowUp":
-            if (this.operador1.y > 30)
+            if (this.operador1.y > 50)
             { this.operador1.y -=10}
             break;
             
          case "ArrowDown":
-            if (this.operador1.y <= 400){
+            if (this.operador1.y <= 420){
                 this.operador1.y +=10}
             break;            
 
