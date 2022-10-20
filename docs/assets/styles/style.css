@@ -29,16 +29,6 @@ canvas {
     font-weight: normal;
 }
 
-.botton {
-  
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: small;
-}
-
 
 .teste 
 {
@@ -47,4 +37,15 @@ canvas {
     align-items: center;
     justify-content: center;
     font-size: small;
+}
+.btns {
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+    
 }

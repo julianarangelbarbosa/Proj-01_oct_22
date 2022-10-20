@@ -7,6 +7,8 @@ var intervalId = null;
 let scoreAdd = 0;
 var cont = 1;
 var cont2 = 0;
+let song = new Audio('docs/assets/sounds/song.wav');
+song.loop = false;
 
 // comendo para desenhar o container e inicializar o score
 container.font = "25px Arial"
@@ -14,7 +16,8 @@ var pts = 0;
 
 // função para inicializar o jogo
 function main() {
-    if (!intervalId){
+    if (!intervalId)
+    {
      operador1 = new Player(200, 80, 50, 50, container);
      controls = new Controls(operador1);
      controls.keyboardEvents();
@@ -54,6 +57,7 @@ const update = () => {
     const crashed = obstacles.some((obstacle, i) => {
       if(operador1.crashWith(obstacle)){
         obstacles.splice(i, 1)
+        song.play();
       }
       return operador1.crashWith(obstacle);
     });
@@ -68,8 +72,8 @@ const update = () => {
   {
     clearInterval(intervalId);
     intervalId = null;
-    if (scoreAdd > 0) {container.fillText(`Game Over: Job done => Unload: ${scoreAdd} Trucks`, 10, 430);}
-    else {container.fillText(`Game Over: Bad Job => Unload: ${scoreAdd} Trucks`, 10, 430);}
+    if (scoreAdd > 0) {container.fillText(`Game Over: Job done => Unload: ${scoreAdd} Trucks`, 50, 450);}
+    else {container.fillText(`Game Over: Bad Job => Unload: ${scoreAdd} Trucks`, 50, 450);}
     
   }
 

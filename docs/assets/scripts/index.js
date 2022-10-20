@@ -1,8 +1,11 @@
 window.onload = () => {
     document.getElementById('start-button').onclick = () => {
-    
-        main()
+      main();
     };
+
+    document.getElementById('restart-button').onclick = () => {
+      window.location.reload();
+    }
   
     function startGame() {
       //let game = new Game();
