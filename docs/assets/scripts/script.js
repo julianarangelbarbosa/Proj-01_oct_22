@@ -14,9 +14,8 @@ var pts = 0;
 
 // função para inicializar o jogo
 function main() {
-   if (!intervalId){
-
-     operador1 = new Player(200, 50, 50, 50, container);
+    if (!intervalId){
+     operador1 = new Player(200, 80, 50, 50, container);
      controls = new Controls(operador1);
      controls.keyboardEvents();
      intervalId = setInterval(update, 1000/60);
@@ -45,7 +44,7 @@ const update = () => {
         obstacles[i].drawBar();   
     }
 
-    if (frames % 120 === 0 && obstacles.length<100) {
+    if (frames % 80 === 0 && obstacles.length<120) {
      obstacles.push(new Enemy(container));
     }
   }
@@ -69,25 +68,30 @@ const update = () => {
   {
     clearInterval(intervalId);
     intervalId = null;
-    container.fillText(`Game Over: Good Job => Unload:${scoreAdd} Trucks`, 10, 80);
+    if (scoreAdd > 0) {container.fillText(`Game Over: Job done => Unload: ${scoreAdd} Trucks`, 10, 430);}
+    else {container.fillText(`Game Over: Bad Job => Unload: ${scoreAdd} Trucks`, 10, 430);}
+    
   }
 
   function score() 
   {
-    container.font = '18px monospace';
+    container.font = '18px serif';
     container.fillStyle = 'black';
+    container.bold = "black";
     //const score = Math.floor(this.frames / 5);
     console.log(scoreAdd);
-    container.fillText(`Score: ${scoreAdd}`, 10, 30);
+    container.fillText(`Job Start`, 60, 30);
+    container.fillText(`Score: ${scoreAdd}`, 60, 50);
   }
 
    function timer() 
    {
-    container.font = "18px monospace";
+    container.font = "18px serif";
     container.fillStyle = "black";
-    let seconds = Math.floor(60 - (frames / 60))
+    container.bold ="black";
+    let seconds = Math.floor(60 - (frames / 30))
     if (seconds <= 0) stop()
-    container.fillText(`Timer: 00:${seconds}`, 10, 50);
+    container.fillText(`Timer: 00:${seconds}`, 60, 70);
     };
 
  

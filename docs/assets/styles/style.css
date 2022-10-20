@@ -24,10 +24,9 @@ canvas {
     width: 450px;
     height: 480px;
     background-color: white; 
-    border: black;
-    border-width:medium;
-    border-style:solid;
-
+    
+    font-style: normal;
+    font-weight: normal;
 }
 
 .botton {

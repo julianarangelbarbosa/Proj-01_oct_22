@@ -17,7 +17,7 @@ class Controls {
             }
             break;
           case "ArrowUp":
-            if (this.operador1.y > 50)
+            if (this.operador1.y > 70)
             { this.operador1.y -=10}
             break;
             

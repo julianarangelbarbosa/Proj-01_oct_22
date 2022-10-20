@@ -6,12 +6,15 @@ class Player {
       this.h = h;
       this.container = container;
       this.img = new Image();
+      this.img2 = new Image();
       this.img.src='docs/assets/images/operador_1.png';
+      this.img2.src='docs/assets/images/boss.png';
     }
 
 draw() 
 {
     this.container.drawImage(this.img,this.x,this.y,this.w,this.h);
+    this.container.drawImage(this.img2,0,0,70,70);
     //container.fillRect(operador1.px, operador1.py, operador1.tx, operador1.ty)
     //container.fillText("Score1: "+pts,20,80)
 }

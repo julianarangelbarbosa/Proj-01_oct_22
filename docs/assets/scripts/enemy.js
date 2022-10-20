@@ -1,8 +1,8 @@
 class Enemy {
     constructor(container) {
       this.container = container
-      this.x = 10 + Math.floor(Math.random() * 350);
-      this.y = 50 + Math.floor(Math.random() * 300);
+      this.x = 30 + Math.floor(Math.random() * 350);
+      this.y = 80 + Math.floor(Math.random() * 300);
       this.w = 48; /* Math.floor(Math.random() * 400)+200; */
       this.h = 48;
       /* this.color = `rgb(${this.y % 255}, 0, 0)`; */
