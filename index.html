@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="docs/assets/styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="docs/assets/styles/style.css" />
     <title>Projeto 01</title>
-</head>
-<body>
-   
-    <img src="docs/assets/styles/wh1.png" class="bg" alt="bg">
-    
-   <div class="teste">
+  </head>
+  <body>
+    <img src="docs/assets/styles/wh1.png" class="bg" alt="bg" />
 
-    <div>
-        <h1 class="Frase">Logistic Game: Operator must unload max of trucks as possible</h1>  
+    <div class="teste">
+      <div>
+        <h1 class="Frase">Welcome to Logistics Game !!!</h1>
+        <h1 class="Frase">
+          Objective: Operator needs to find as many trucks as possible in the
+          shortest time
+        </h1>
+      </div>
+
+      <div class="btns">
+        <button id="start-button" class="botton">Game Start</button>
+        <button id="restart-button">Game Restart</button>
+      </div>
+
+      <canvas id="canvas" width="450" height="480"></canvas>
     </div>
-  
-    <div class="btns">
-        <button id="start-button" class="botton">Start</button>  
-        <button id="restart-button">Restart</button>  
-    </div>
-    
-    <canvas id="canvas" width="450" height="480"></canvas>
-</div>
-    <audio src="docs/assets/sounds/mixkit-retro-game-notification-212.wav" autoplay></audio>
+    <audio
+      src="docs/assets/sounds/mixkit-retro-game-notification-212.wav"
+      autoplay
+    ></audio>
 
     <script src="docs/assets/scripts/enemy.js"></script>
     <script src="docs/assets/scripts/controls.js"></script>
     <script src="docs/assets/scripts/player.js"></script>
-    <script src="docs/assets/scripts/script.js"></script> 
+    <script src="docs/assets/scripts/script.js"></script>
     <script src="docs/assets/scripts/index.js"></script>
 
-   
-    <div id="images"></div> 
-   
-</body>
+    <div id="images"></div>
+  </body>
 </html>

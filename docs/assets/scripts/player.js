@@ -8,7 +8,7 @@ class Player {
       this.img = new Image();
       this.img2 = new Image();
       this.img.src='docs/assets/images/operador_1.png';
-      this.img2.src='docs/assets/images/boss.png';
+     // this.img2.src='docs/assets/images/boss.png';
     }
 
 draw() 

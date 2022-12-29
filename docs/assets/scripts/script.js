@@ -11,7 +11,8 @@ let song = new Audio('docs/assets/sounds/song.wav');
 song.loop = false;
 
 // comendo para desenhar o container e inicializar o score
-container.font = "25px Arial"
+container.font = '25px Arial';
+
 var pts = 0;
 
 // função para inicializar o jogo
@@ -72,25 +73,27 @@ const update = () => {
   {
     clearInterval(intervalId);
     intervalId = null;
-    if (scoreAdd > 0) {container.fillText(`Game Over: Job done => Unload: ${scoreAdd} Trucks`, 50, 450);}
-    else {container.fillText(`Game Over: Bad Job => Unload: ${scoreAdd} Trucks`, 50, 450);}
+    if (scoreAdd > 0) {container.fillText(`Game Over !! Great Job 🙂 Unload: ${scoreAdd} Trucks`, 50, 450);}
+    else {container.fillText(`Game Over !! Bad Job 😟 Unload: ${scoreAdd} Trucks`, 50, 450);}
     
   }
 
   function score() 
   {
-    container.font = '18px serif';
+   
+    container.font = '14px arial';
     container.fillStyle = 'black';
     container.bold = "black";
     //const score = Math.floor(this.frames / 5);
     console.log(scoreAdd);
-    container.fillText(`Job Start`, 60, 30);
-    container.fillText(`Score: ${scoreAdd}`, 60, 50);
+    container.fillText(`Game Start !! Time Countdown Starts !! `, 60, 30);
+    container.fillText(`Score: ${scoreAdd} points`, 60, 50);
   }
 
    function timer() 
    {
-    container.font = "18px serif";
+  
+    container.font = "14px arial";
     container.fillStyle = "black";
     container.bold ="black";
     let seconds = Math.floor(60 - (frames / 30))
